@@ -10,6 +10,21 @@ const TeacherSchema = new mongoose.Schema({
         unique: true,
         required: true
     },
+    subject: {
+        type: String
+    },
+    experience: {
+        type: Number
+    },
+    location: {
+        type: String
+    },
+    description: {
+        type: String,
+    },
+    image: {
+        type: String
+    },
     password: {
         type: String,
         required: true
