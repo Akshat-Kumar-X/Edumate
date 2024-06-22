@@ -8,7 +8,7 @@ import { CiLogout } from "react-icons/ci";
 
 const Navbar = () => {
   const { isAuthenticated, logout } = useContext(AuthContext);
-
+  
   return (
     <header className='header'>
       <nav className='nav flex justify-between items-center px-7 text-lg'>
