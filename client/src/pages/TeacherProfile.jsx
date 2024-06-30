@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import defaultImage from '../../src/assets/profile.jpg';
 
 import { MdLocalPhone } from "react-icons/md";
 import { TfiLocationPin } from "react-icons/tfi";
@@ -19,6 +20,7 @@ const TeacherProfile = () => {
   const [time, setTime] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
+
 
   useEffect(() => {
     const fetchTeacher = async () => {
@@ -45,7 +47,7 @@ const TeacherProfile = () => {
 
     if (!studentId) {
       toast.error('Please SignIn');
-      navigate('/selection');
+      navigate('/student-login');
       return;
     }
 
@@ -70,6 +72,7 @@ const TeacherProfile = () => {
   }
 
   const user = JSON.parse(localStorage.getItem('user'));
+  const profileImage = teacher.image ? teacher.image : defaultImage;
 
   return (
     <div className='max-w-7xl mx-auto md:px-9 px-5'>
@@ -82,7 +85,7 @@ const TeacherProfile = () => {
         <div>
           <div className='flex gap-10 items-start justify-start'>
             <img
-              src={teacher.image}
+              src={profileImage}
               alt={teacher.name}
               className='md:w-48 md:h-48 w-36 h-36 rounded-xl object-cover absolute md:top-[-90px] top-[-70px] border-[5px] border-white'
             />

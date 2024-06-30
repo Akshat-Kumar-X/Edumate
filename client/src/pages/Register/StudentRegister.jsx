@@ -28,7 +28,7 @@ const StudentRegister = () => {
   };
 
   return (
-    <div className='bg-gradient-to-r from-fuchsia-200 via-indigo-100 to bg-purple-300 min-h-screen flex flex-col  items-center bg-cover'>
+    <div className='bg-gradient-to-r from-fuchsia-200 via-indigo-100 to bg-purple-300 min-h-screen flex flex-col  items-center bg-cover pb-20'>
       <section className='w-full py-10'>
         <div className='flex flex-col justify-center items-center h-full'>
           <div className='flex flex-row rounded-3xl bg-white shadow-2xl'>

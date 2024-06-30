@@ -64,7 +64,7 @@ const Profile = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='max-w-7xl mx-auto md:px-9 px-5'>
+    <form onSubmit={handleSubmit} className='max-w-7xl mx-auto md:px-9 px-5 mb-20'>
       <div className='rounded-lg bg-gradient-to-r from-fuchsia-200 via-indigo-100 to bg-purple-300 h-[150px] bg-cover' style={{ backgroundImage: "url(https://png.pngtree.com/thumb_back/fh260/background/20220511/pngtree-abstract-pastel-purple-gradient-background-ecology-concept-for-your-graphic-design-image_1324968.jpg)" }}>
       </div>
       <div className='rounded-lg flex gap-5 lg:flex-row flex-col justify-between  px-5 pb-5 md:px-10 md:pt-5 pt-3 relative'>

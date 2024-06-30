@@ -44,7 +44,7 @@ const FindTeachers = () => {
   const filteredTeachers = filterTeachers();
 
   return (
-    <div className='bg-gradient-to-r from-fuchsia-200 via-indigo-100 to bg-purple-300 h-full bgscreen'>  
+    <div className='bg-gradient-to-r from-fuchsia-200 via-indigo-100 to bg-purple-300 h-full bgscreen pb-20'>  
       <div className='bg-white mt-5 pb-5'>
         <div className='max-w-7xl mx-auto flex-center flex-col gap-7'>
           <div className='flex max-md:flex-col justify-center items-center max-md:gap-4'>

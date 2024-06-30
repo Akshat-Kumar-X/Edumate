@@ -5,7 +5,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 const Selection = () => {
   return (
-    <section className='max-w-7xl mx-auto'>
+    <section className='max-w-7xl mx-auto pb-40'>
         <div className='flex max-md:flex-col-reverse items-center px-9 mt-16'>
             <div className='flex-1 ps-5 flex flex-col justify-start  max-md:mt-10'>
                 <h2 className='text-5xl font-medium text-[#353452]'>

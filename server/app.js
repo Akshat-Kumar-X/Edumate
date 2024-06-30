@@ -159,6 +159,30 @@ app.get('/api/my-appointments', async (req, res) => {
   }
 });
 
+app.put('/api/update-appointment-status', async (req, res) => {
+  const { appointmentId, status } = req.body;
+
+  if (!appointmentId || !status) {
+    return res.status(400).json({ message: 'Appointment ID and status are required' });
+  }
+
+  try {
+    const appointment = await AppointmentModel.findByIdAndUpdate(
+      appointmentId,
+      { status },
+      { new: true }
+    );
+    if (!appointment) {
+      return res.status(404).json({ message: 'Appointment not found' });
+    }
+
+    res.status(200).json(appointment);
+  } catch (error) {
+    console.error('Error updating appointment status:', error.message);
+    res.status(500).json({ message: 'Could not update appointment status', error: error.message });
+  }
+});
+
 app.get('/api/teachers', async (req, res) => {
   try {
     const teachers = await TeacherModel.find({});
