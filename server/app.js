@@ -213,7 +213,7 @@ app.get('/api/teacher-profile/:id', async (req, res) => {
   }
 });
 
-app.use('/status', (req, res) => {
+app.get('/status', (req, res) => {
   res.send("Running");
 });
 
