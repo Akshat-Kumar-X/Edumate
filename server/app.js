@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json({ limit: '50mb' }));
 app.use(cors({
   origin: 'https://edumate-tutor.vercel.app',
-  methods: ['POST', 'GET', 'PUT'],
+  methods: ['POST', 'GET', 'PUT', 'DELETE'],
   credentials: true
 }));
 
@@ -215,6 +215,6 @@ app.get('/api/teacher-profile/:id', async (req, res) => {
 
 
 
-app.listen(3000, () => {
-  console.log('Server Running.');
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Server running on port ${process.env.PORT || 3000}.`);
 });
