@@ -213,7 +213,9 @@ app.get('/api/teacher-profile/:id', async (req, res) => {
   }
 });
 
-
+app.use('/status', (req, res) => {
+  res.send("Running");
+});
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Server running on port ${process.env.PORT || 3000}.`);
