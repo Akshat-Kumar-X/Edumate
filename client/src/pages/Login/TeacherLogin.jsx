@@ -11,7 +11,7 @@ const TeacherLogin = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const { login } = useContext(AuthContext);
-  axios.defaults.withCredentials = true
+  axios.defaults.withCredentials = true;
   const handleSubmit = async (e) => {
     e.preventDefault();
 
