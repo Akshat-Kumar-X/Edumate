@@ -69,7 +69,7 @@ app.post('/api/teacher-register', async (req, res) => {
 });
 
 // Teacher login endpoint
-app.post('/api/teacher-login', async (req, res) => {
+app.post('/teacher-login', async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await TeacherModel.findOne({ email });
