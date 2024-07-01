@@ -11,6 +11,7 @@ const TeacherRegister = () => {
   const [subject, setSubject] = useState('');
   const [experience, setExperience] = useState('');
   const [location, setLocation] = useState('');
+  axios.defaults.withCredentials = true;
 
   const navigate = useNavigate();
 

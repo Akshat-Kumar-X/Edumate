@@ -12,6 +12,7 @@ import BASE_URL from '../constants';
 
 const Profile = () => {
   const user = JSON.parse(localStorage.getItem('user'));
+  axios.defaults.withCredentials = true;
 
   const [email, setEmail] = useState(user?.email);
   const [password, setPassword] = useState('');

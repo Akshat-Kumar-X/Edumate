@@ -7,6 +7,7 @@ import BASE_URL from '../constants';
 const Appointments = () => {
   const [appointments, setAppointments] = useState([]);
   const user = JSON.parse(localStorage.getItem('user'));
+  axios.defaults.withCredentials = true;
 
   const fetchAppointments = async () => {
     try {

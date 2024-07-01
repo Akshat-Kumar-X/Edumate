@@ -9,6 +9,7 @@ const StudentRegister = () => {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const navigate = useNavigate();
+  axios.defaults.withCredentials = true;
 
   
   const handleSubmit = async (e) => {

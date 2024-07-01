@@ -21,6 +21,7 @@ const TeacherProfile = () => {
   const [time, setTime] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
+  axios.defaults.withCredentials = true;
 
 
   useEffect(() => {

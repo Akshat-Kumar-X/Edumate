@@ -14,6 +14,7 @@ const FindTeachers = () => {
   const [searchLocation, setSearchLocation] = useState('');
   const [searchCity, setSearchCity] = useState('');
   const [searchState, setSearchState] = useState('');
+  axios.defaults.withCredentials = true;
 
   useEffect(() => {
     const fetchTeachers = async () => {
