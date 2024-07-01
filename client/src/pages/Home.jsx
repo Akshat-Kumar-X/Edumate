@@ -14,7 +14,7 @@ const Home = () => {
             <span className='relative'>
               TEACHERS
               <div className='absolute right-[-50px] bottom-1 rotate-12 text-lg w-[65px] text-center text-white font-medium bg-gradient-to-r from-orange-400 to-rose-500 px-3 py-1 rounded-full'>Free</div>
-              <img src="./src/assets/images/arrow.png" alt="arrow" className='absolute max-md:hidden h-20 top-[-50px] right-[-180px]' />
+              <img src="/src/assets/images/arrow.png" alt="arrow" className='absolute max-md:hidden h-20 top-[-50px] right-[-180px]' />
             </span>
           </h2>
           <h2 className='text-3xl w-[170px] font-extrabold bg-gradient-to-r from-yellow-300  to-orange-500 i text-transparent bg-clip-text ' >Around You</h2>
