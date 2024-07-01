@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { RxShadowNone } from "react-icons/rx";
 import defaultImage from '../../src/assets/profile.jpg';
+import BASE_URL from '../constants';
 
 const Appointments = () => {
   const [appointments, setAppointments] = useState([]);
@@ -14,11 +15,11 @@ const Appointments = () => {
       let response;
 
       if (user.type === 'student') {
-        response = await axios.get('http://localhost:3000/api/my-appointments', {
+        response = await axios.get(`${BASE_URL}/api/my-appointments`, {
           params: { studentId: id }
         });
       } else if (user.type === 'teacher') {
-        response = await axios.get('http://localhost:3000/api/my-appointments', {
+        response = await axios.get(`${BASE_URL}/api/my-appointments`, {
           params: { teacherId: id }
         });
       }
@@ -36,7 +37,7 @@ const Appointments = () => {
 
   const updateStatus = async (appointmentId, status) => {
     try {
-      const response = await axios.put('http://localhost:3000/api/update-appointment-status', {
+      const response = await axios.put(`${BASE_URL}/api/update-appointment-status`, {
         appointmentId,
         status,
       });

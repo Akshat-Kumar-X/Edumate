@@ -4,19 +4,19 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../HOC/AuthContext';
 import { Link } from 'react-router-dom';
-
+import BASE_URL from '../../constants';
 
 const TeacherLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const { login } = useContext(AuthContext);
-
+  axios.defaults.withCredentials = true
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const result = await axios.post('http://localhost:3000/api/teacher-login', { email, password });
+      const result = await axios.post(`${BASE_URL}/api/teacher-login`, { email, password });
       const { message, user } = result.data;
       if (message === 'Login successful') {
         toast.success(message);

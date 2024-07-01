@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import BASE_URL from '../../constants';
 
 const StudentRegister = () => {
   const [email, setEmail] = useState('');
@@ -14,7 +15,7 @@ const StudentRegister = () => {
     e.preventDefault();
 
     try {
-      const result = await axios.post('http://localhost:3000/api/student-register', { name, email, password });
+      const result = await axios.post(`${BASE_URL}/api/student-register`, { name, email, password });
       if (result.data === 'User not created') {
         toast.error(result.data);
       } else {

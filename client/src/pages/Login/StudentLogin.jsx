@@ -4,6 +4,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../HOC/AuthContext';
 import { Link } from 'react-router-dom';
+import BASE_URL from '../../constants';
 
 const StudentLogin = () => {
   const [email, setEmail] = useState('');
@@ -15,7 +16,7 @@ const StudentLogin = () => {
     e.preventDefault();
 
     try {
-      const result = await axios.post('http://localhost:3000/api/student-login', { email, password });
+      const result = await axios.post(`${BASE_URL}/api/student-login`, { email, password });
       const { message, user } = result.data;
       if (message === 'Login successful') {
         toast.success(message);

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import TeacherCard from '../components/TeacherCard';
-import { IoSearchOutline } from "react-icons/io5";
+
 import { BsArrowUpRight } from "react-icons/bs";
 import { IoFilter } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
+import BASE_URL from '../constants';
 
 const FindTeachers = () => {
   const [teachers, setTeachers] = useState([]);
@@ -17,7 +18,7 @@ const FindTeachers = () => {
   useEffect(() => {
     const fetchTeachers = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/teachers');
+        const response = await axios.get(`${BASE_URL}/api/teachers`);
         setTeachers(response.data);
       } catch (err) {
         console.error(err);

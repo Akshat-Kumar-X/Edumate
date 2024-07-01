@@ -12,6 +12,7 @@ import { MdOutlineSubject } from "react-icons/md";
 import { BsClockHistory } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import BASE_URL from '../constants';
 
 const TeacherProfile = () => {
   const { id } = useParams();
@@ -52,7 +53,7 @@ const TeacherProfile = () => {
     }
 
     try {
-      await axios.post('http://localhost:3000/api/appointments', {
+      await axios.post(`${BASE_URL}/api/appointments`, {
         studentId,
         teacherId: id,
         date,
@@ -110,7 +111,7 @@ const TeacherProfile = () => {
                 </div>
                 <div className='flex flex-col'>
                   <h3 className='text-xl font-medium text-[#353452] mb-1 flex items-center gap-2'><MdLocalPhone /> Contact</h3>
-                  <p className='font-medium bg-gradient-to-r from-fuchsia-500 to-indigo-400 text-transparent bg-clip-text'>+91 880077XXXX</p>
+                  <p className='font-medium bg-gradient-to-r from-fuchsia-500 to-indigo-400 text-transparent bg-clip-text'>+91 {teacher.contact}</p>
                 </div>
                 <div className='flex flex-col'>
                   <h3 className='text-xl font-medium text-[#353452] mb-1 flex items-center gap-2'><TfiLocationPin /> Location</h3>

@@ -8,7 +8,7 @@ import { TfiLocationPin } from "react-icons/tfi";
 import { MdOutlineSubject } from "react-icons/md";
 import { BsClockHistory } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
-
+import BASE_URL from '../constants';
 
 const Profile = () => {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -19,6 +19,7 @@ const Profile = () => {
   const [subject, setSubject] = useState(user?.subject || '');
   const [experience, setExperience] = useState(user?.experience || '');
   const [location, setLocation] = useState(user?.location || '');
+  const [contact, setContact] = useState(user?.contact || '');
   const [image, setImage] = useState(user?.image || '');
   const [description, setDescription] = useState(user?.description);
   const [imageFile, setImageFile] = useState(null);
@@ -47,13 +48,13 @@ const Profile = () => {
     e.preventDefault();
 
     try {
-      const result = await axios.post('http://localhost:3000/api/profile', {
-        name, email, password, subject, experience, location, description, image
+      const result = await axios.post(`${BASE_URL}/api/profile`, {
+        name, email, password, subject, experience, location, contact, description, image
       });
 
       if (result.data.message === 'Update successful') {
         toast.success('Profile Updated.');
-        localStorage.setItem('user', JSON.stringify({ ...user, name, subject, experience, location, description, image }));
+        localStorage.setItem('user', JSON.stringify({ ...user, name, subject, experience, location, contact, description, image }));
       } else {
         toast.error(result.data.message);
       }
@@ -136,7 +137,15 @@ const Profile = () => {
               </div>
               <div className='flex flex-col'>
                 <h3 className=' text-xl font-medium text-[#353452] mb-1 flex items-center gap-2 '><MdLocalPhone /> Conatct</h3>
-                <p className='font-medium bg-gradient-to-r from-fuchsia-500 to-indigo-400 text-transparent bg-clip-text '>+91 880077XXXX</p>
+                <input
+                  type="text"
+                  name="contact"
+                  placeholder='contact'
+                  onChange={(e) => setContact(e.target.value)}
+                  value={contact}
+                  className='py-2 px-2 w-full shadow-md rounded-md font-medium  text-fuchsia-500  border'
+                  required
+                />
               </div>
 
             </div>

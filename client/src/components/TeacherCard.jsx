@@ -21,9 +21,9 @@ const TeacherCard = ({ id, name, subject, experience, location, image, descripti
           </p>
           
         </div>
-        <Link to={`/teacher-profile/${id}`} className='absolute right-[-30px] md:top-[70px] bg-blue-400 px-5 py-2 rounded-lg md:flex-center hidden text-white font-semibold gap-1'>
+        <div className='absolute right-[-30px] md:top-[70px] bg-blue-400 px-5 py-2 rounded-lg md:flex-center hidden text-white font-semibold gap-1'>
           View Profile <FaAngleRight />
-        </Link>
+        </div>
       </div>
       <hr className="md:mb-2 mb-5 md:mt-5 " />
         <div className="flex justify-center md:hidden  gap-3">

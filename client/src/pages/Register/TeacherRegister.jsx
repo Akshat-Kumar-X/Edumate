@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import BASE_URL from '../../constants';
 
 const TeacherRegister = () => {
   const [email, setEmail] = useState('');
@@ -20,9 +21,10 @@ const TeacherRegister = () => {
 
     try {
       let image = '';
+      let contact = '8800XXXXXX';
       let description = `Educator with ${experience} years of experience in ${subject}, fostering a positive learning environment.`;
-      const result = await axios.post('http://localhost:3000/api/teacher-register', {
-        name, email, password, subject, experience, location, description, image
+      const result = await axios.post(`${BASE_URL}/api/teacher-register`, {
+        name, email, password, subject, experience, location, contact, description, image
       });
 
       if (result.data.message === 'User not created') {
