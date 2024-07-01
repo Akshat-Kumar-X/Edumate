@@ -26,7 +26,7 @@ await mongoose.connect(process.env.MONGODB_URI)
 
 // Profile update route
 app.post('/api/profile', async (req, res) => {
-  const { name, email, password, subject, experience, location, image, description } = req.body;
+  const { name, email, password, subject, experience, location, contact, image, description } = req.body;
   try {
     const user = await TeacherModel.findOne({ email });
     if (user && await bcrypt.compare(password, user.password)) {
@@ -34,6 +34,7 @@ app.post('/api/profile', async (req, res) => {
       user.subject = subject;
       user.experience = experience;
       user.location = location;
+      user.contact = contact;
       user.description = description;
       user.image = image;
 
@@ -50,7 +51,7 @@ app.post('/api/profile', async (req, res) => {
 // Teacher registration endpoint
 app.post('/api/teacher-register', async (req, res) => {
   try {
-    const { email, password, name, subject, experience, location, description, image } = req.body;
+    const { email, password, name, subject, experience, location, contact, description, image } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
     const teacher = await TeacherModel.create({
       email,
@@ -59,6 +60,7 @@ app.post('/api/teacher-register', async (req, res) => {
       subject,
       experience,
       location,
+      contact,
       description,
       image,
     });
@@ -69,7 +71,7 @@ app.post('/api/teacher-register', async (req, res) => {
 });
 
 // Teacher login endpoint
-app.post('/teacher-login', async (req, res) => {
+app.post('/api/teacher-login', async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await TeacherModel.findOne({ email });
@@ -82,6 +84,7 @@ app.post('/teacher-login', async (req, res) => {
         subject: user.subject,
         experience: user.experience,
         location: user.location,
+        contact: user.contact,
         type: 'teacher',
         description: user.description,
         image: user.image,

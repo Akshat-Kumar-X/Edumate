@@ -19,6 +19,9 @@ const TeacherSchema = new mongoose.Schema({
     location: {
         type: String
     },
+    contact: {
+        type: String,
+    },
     description: {
         type: String,
     },
