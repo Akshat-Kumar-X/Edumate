@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { RxShadowNone } from "react-icons/rx";
+import defaultImage from '../../src/assets/profile.jpg';
 
 const Appointments = () => {
   const [appointments, setAppointments] = useState([]);
@@ -65,7 +66,7 @@ const Appointments = () => {
                 {user.type === 'student' ? (
                   <div className='flex md:items-center md:flex-row flex-col md:gap-10 gap-1 text-xs text-gray-600'>
                     <p className='md:flex hidden flex-col '>Status: <span className='text-white px-6 py-1 text-base font-medium rounded-full bg-gradient-to-r from-pink-400 to-rose-500'>{appointment.status}</span></p>
-                    <img src={appointment.teacherId.image} alt="Profile" className='h-16 w-16 object-cover rounded-full shadow-xl' />
+                    <img src={appointment.teacherId.image?appointment.teacherId.image:defaultImage} alt="Profile" className='h-16 w-16 object-cover rounded-full shadow-xl' />
                     <p className='flex flex-col'>Teacher: <span className='font-medium text-lg text-[#353452]'>{appointment.teacherId.name}</span></p>
                     <p className='flex flex-col'>Subject: <span className='font-medium text-lg text-[#353452]'>{appointment.teacherId.subject}</span></p>
                     <p className='flex flex-col'>Date: <span className='font-medium text-lg text-[#353452]'>{new Date(appointment.date).toLocaleDateString()}</span></p>

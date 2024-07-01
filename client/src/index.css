@@ -32,7 +32,7 @@
   }
 
   .nav-link li {
-    @apply hover:text-purple-500 hover:underline hover:scale-110 duration-300 
+    @apply hover:text-purple-500  hover:scale-110 duration-300 
   }
 
   .selection-card {

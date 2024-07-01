@@ -18,7 +18,7 @@ const App = () => {
   return (
     <AuthProvider>
       <BrowserRouter>
-      <div className='flex flex-col min-h-screen'>
+      <div className='flex flex-col min-h-screen overflow-hidden'>
         <Navbar />
         <div className='flex-grow'>
           <Routes>

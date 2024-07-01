@@ -45,8 +45,8 @@ const Footer = () => {
               <h3 className="flex items-center text-2xl gap-2">Main Links <span className="text-[#5f5e75] font-xm text-3xl">⟶</span></h3>
               <a href='/#hero'>Home</a>
               <a href='/#about'>About</a>
-              <Link to='/find-teachers'>Teachers</Link>
-              <Link to='/selection' className="max-md:hidden">Get Started</Link>
+              <a href='/find-teachers'>Teachers</a>
+              <a href='/selection' className="max-md:hidden">Get Started</a>
             </div>
             <div className=" h-[3px] my-2    pointer-events-none bg-gradient-to-r from-transparent via-[#E7E7E9]  to-transparent"></div>
 
@@ -54,8 +54,8 @@ const Footer = () => {
               <h3 className="flex items-center text-2xl gap-2">Explore <span className="text-[#5f5e75]  font-xm text-3xl">⟶</span></h3>
               <a href='/#hero'>Landing</a>
               <a href='/#about'>Know More</a>
-              <Link to='/find-teachers'>Courses</Link>
-              <Link to='/selection' className="max-md:hidden">Login</Link>
+              <a href='/find-teachers'>Courses</a>
+              <a href='/selection' className="max-md:hidden">Login</a>
             </div>
             
             <div className="md: h-[3px] my-2  pointer-events-none bg-gradient-to-r from-transparent via-[#E7E7E9]  to-transparent"></div>
