@@ -12,13 +12,23 @@ dotenv.config();
 
 const app = express();
 app.use(express.json({ limit: '50mb' }));
-app.use(cors());
+app.use(cors({
+  origin: 'https://edumate-tutor.vercel.app',
+  methods: ['POST', 'GET', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
+const connectToDatabase = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log('Database Connected.');
+  } catch (err) {
+    console.log('Database connection error:', err.message);
+    process.exit(1); // Exit process with failure
+  }
+};
 
-// Connect to MongoDB
-await mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('Database Connected.'))
-  .catch((err) => console.log('Database connection error:', err.message));
+connectToDatabase();
 
 // Profile update route
 app.post('/api/profile', async (req, res) => {
