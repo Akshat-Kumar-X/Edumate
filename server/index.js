@@ -213,8 +213,8 @@ app.get('/api/teacher-profile/:id', async (req, res) => {
   }
 });
 
-app.get('/status', (req, res) => {
-  res.send("Running");
+app.use('/', (req, res) => {
+  res.json({message : "Running"});
 });
 
 app.listen(process.env.PORT || 3000, () => {
