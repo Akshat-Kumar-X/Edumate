@@ -14,7 +14,7 @@ const Home = () => {
             <span className='relative'>
               TEACHERS
               <div className='absolute right-[-50px] bottom-1 rotate-12 text-lg w-[65px] text-center text-white font-medium bg-gradient-to-r from-orange-400 to-rose-500 px-3 py-1 rounded-full'>Free</div>
-              <img src="/src/assets/images/arrow.png" alt="arrow" className='absolute max-md:hidden h-20 top-[-50px] right-[-180px]' />
+              <img src="/assets/images/arrow.png" alt="arrow" className='absolute max-md:hidden h-20 top-[-50px] right-[-180px]' />
             </span>
           </h2>
           <h2 className='text-3xl w-[170px] font-extrabold bg-gradient-to-r from-yellow-300  to-orange-500 i text-transparent bg-clip-text ' >Around You</h2>
@@ -23,7 +23,7 @@ const Home = () => {
               Discover top educators nearby, enabling students and teachers to schedule appointments and demos seamlessly.
             </p>
             <div className='flex flex-col max-md:items-center'>
-              <img src="./src/assets/images/teachers.png" alt="Teachers" className='w-[200px]' />
+              <img src="/assets/images/teachers.png" alt="Teachers" className='w-[200px]' />
               <p className='text-gray-700 text-sm md:ps-6 font-medium w-80 max-md:text-center'>
                 Experienced Teachers
               </p>
@@ -54,15 +54,15 @@ const Home = () => {
 
         </div>
         <div className='flex-1 '>
-          <img src="./src/assets/images/heroBanner.png" alt="Hero Banner" />
+          <img src="/assets/images/heroBanner.png" alt="Hero Banner" />
         </div>
       </section>
       <section id='about' className='flex md:ps-12 max-md:flex-col-reverse pt-20 pb-20 max-md:gap-10'>
         <div className='flex-1 flex-center  '>
-          <img src="./src/assets/images/about.png" alt="About" className='max-w-[430px] max-md:max-w-[380px]' />
+          <img src="/assets/images/about.png" alt="About" className='max-w-[430px] max-md:max-w-[380px]' />
         </div>
         <div className='flex-1  md:ps-10 flex flex-col justify-center max-md:items-center relative'>
-          <img src="./src/assets/images/stars.png" alt="stars" className='w-20 absolute top-[-100px] right-20'/>
+          <img src="/assets/images/stars.png" alt="stars" className='w-20 absolute top-[-100px] right-20'/>
           <h2 className='text-5xl  text-[#353452] font-medium max-md:text-center'>
             Access to Learning <span className='max-md:hidden'>at</span><br /> Anytime from
             <span className='bg-gradient-to-r md:ms-4 from-fuchsia-500 to-indigo-400 inline-block text-transparent bg-clip-text me-2'> Anywhere </span>
@@ -76,21 +76,21 @@ const Home = () => {
           <div className='flex flex-col  gap-5  font-medium '>
             <div className='flex gap-10'>
               <div className='flex-center gap-2 me-2'>
-                <img src="./src/assets/images/check.png" alt="check" className='w-6 ' />
+                <img src="/assets/images/check.png" alt="check" className='w-6 ' />
                 <p>Expert Training</p>
               </div>
               <div className='flex-center gap-2'>
-                <img src="./src/assets/images/check1.png" alt="check" className='w-6' />
+                <img src="/assets/images/check1.png" alt="check" className='w-6' />
                 <p>Online Learning</p>
               </div>
             </div>
             <div className='flex gap-10'>
               <div className='flex-center gap-2'>
-                <img src="./src/assets/images/check2.png" alt="check" className='w-6' />
+                <img src="/assets/images/check2.png" alt="check" className='w-6' />
                 <p>Lifetime Access</p>
               </div>
               <div className='flex-center gap-2'>
-                <img src="./src/assets/images/check3.png" alt="check" className='w-6' />
+                <img src="/assets/images/check3.png" alt="check" className='w-6' />
                 <p>Great Results</p>
               </div>
             </div>
@@ -103,7 +103,7 @@ const Home = () => {
       <section className='flex md:ps-12 max-md:flex-col pt-0 pb-20 max-md:gap-10'>
 
         <div className='flex-1 ps-5 flex flex-col justify-center md:max-w-[540px] max-md:items-center relative'>
-          <img src="./src/assets/images/stars.png" alt="stars" className='w-20 absolute top-[-50px] max-md:left-10'/>
+          <img src="/assets/images/stars.png" alt="stars" className='w-20 absolute top-[-50px] max-md:left-10'/>
           <h2 className='text-5xl  text-[#353452] font-medium max-md:text-center'>
             Meet Skilled
             <br className='hidden max-md:block' />
@@ -118,7 +118,7 @@ const Home = () => {
           <a href='/find-teachers' className='flex mt-5 text-lg w-[210px] items-center gap-1 text-white px-6 py-1 rounded-[2px] bg-gradient-to-r from-fuchsia-400 to-purple-600 hover:from-fuchsia-500 hover:to-purple-700 duration-300'>View all teachers <LiaLongArrowAltRightSolid /></a>
         </div>
         <div className='flex-1 flex-center  '>
-          <img src="./src/assets/images/skilled.png" alt="About" className='max-h-[450px]' />
+          <img src="/assets/images/skilled.png" alt="About" className='max-h-[450px]' />
         </div>
       </section>
     </div>

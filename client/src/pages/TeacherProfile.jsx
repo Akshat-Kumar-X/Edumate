@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import defaultImage from '../../src/assets/profile.jpg';
+import defaultImage from '/assets/profile.jpg';
 
 import { MdLocalPhone } from "react-icons/md";
 import { TfiLocationPin } from "react-icons/tfi";

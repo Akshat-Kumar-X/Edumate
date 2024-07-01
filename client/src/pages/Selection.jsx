@@ -20,10 +20,10 @@ const Selection = () => {
             </div>
             <div className='flex-1 flex-center gap-7'>
                 <Link to='/teacher-login' className='rounded-[30px] shadow-lg hover:scale-105 duration-300 '>
-                    <img src="./src/assets/images/SelectionTeacher.png" alt="Teacher" className=''/>
+                    <img src="/assets/images/SelectionTeacher.png" alt="Teacher" className=''/>
                 </Link>
                 <Link to='/student-login'  className='rounded-[30px] shadow-lg hover:scale-105 duration-300'>
-                    <img src="./src/assets/images/selectionStudent.png" alt="Student" />
+                    <img src="/assets/images/selectionStudent.png" alt="Student" />
                 </Link>
             </div>
         </div>

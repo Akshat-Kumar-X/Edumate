@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
 const TeacherCard = ({ id, name, subject, experience, location, image, description }) => {
-  const defaultImage = './src/assets/profile.jpg';
+  const defaultImage = '/assets/profile.jpg';
   const profileImage = image != "" ? image : defaultImage;
  
   return (

@@ -37,7 +37,7 @@ const TeacherLogin = () => {
         <div className='flex flex-col justify-center items-center h-full'>
           <div className='flex flex-row rounded-3xl bg-white shadow-2xl'>
             <div className='flex-1 max-w-[550px] object-cover max-md:hidden p-5 pr-0' >
-              <img src="./src/assets/images/login.png" alt="Login Banner" />
+              <img src="/assets/images/login.png" alt="Login Banner" />
             </div>
             <div className='flex-1 flex items-center'>
               <div className='flex flex-col w-full bg-white p-10 text-black rounded-md '>

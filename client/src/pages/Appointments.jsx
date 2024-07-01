@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { RxShadowNone } from "react-icons/rx";
-import defaultImage from '../../src/assets/profile.jpg';
+import defaultImage from '/assets/profile.jpg';
 import BASE_URL from '../constants';
 
 const Appointments = () => {
@@ -52,7 +52,7 @@ const Appointments = () => {
     <section className='max-w-7xl mx-auto md:px-9 px-5 mb-16'>
       <div className='relative flex md:justify-center items-center rounded-3xl mt-10  h-[150px] bg-cover bg-center' style={{ backgroundImage: "url(https://i.ibb.co/p4n1d2p/appointment-banner.png)" }}>
         <h1 className='md:text-5xl text-3xl font-bold text-white z-10 max-md:ms-10'>Appointments</h1>
-        <img src="./src/assets/images/tutor.png" alt="Login Banner" className='w-40 absolute bottom-0 right-40 max-md:right-10 z-0'/>
+        <img src="/assets/images/tutor.png" alt="Login Banner" className='w-40 absolute bottom-0 right-40 max-md:right-10 z-0'/>
       </div>
       <div className=' flex-col'>
         <h1 className=' text-2xl text-[#353452] text-center my-5'>Latest Appointments</h1>

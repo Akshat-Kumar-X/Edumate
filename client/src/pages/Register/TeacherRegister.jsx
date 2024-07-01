@@ -136,7 +136,7 @@ const TeacherRegister = () => {
               </div>
             </div>
             <div className='flex-1 max-w-[550px] object-cover max-md:hidden p-5 pl-0' >
-              <img src="./src/assets/images/register.png" alt="Login Banner" />
+              <img src="/assets/images/register.png" alt="Login Banner" />
             </div>
           </div>
           
