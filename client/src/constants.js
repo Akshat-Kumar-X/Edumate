@@ -1,4 +1,4 @@
 // constants.js
-const BASE_URL = 'https://knowledge-hub-three.vercel.app';
+const BASE_URL = 'https://edumate-tutor-api.vercel.app';
 
 export default BASE_URL;
