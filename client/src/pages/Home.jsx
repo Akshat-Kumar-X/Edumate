@@ -4,10 +4,10 @@ import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 
 const Home = () => {
   return (
-    <div id="hero" className='max-w-7xl mx-auto'>
+    <div id="hero" className='max-w-7xl mx-auto max-md:pe-5 max-md:ps-3'>
       <section className='flex max-md:flex-col md:ps-8 justify-center items-center max-md:gap-16'>
         <div className='flex-1 flex flex-col pt-10 md:ps-5 max-w-[630px]'>
-          <h2 className='text-7xl  text-[#353452] dm-sans-font-bold'>
+          <h2 className='text-7xl max-md:text-6xl  text-[#353452] dm-sans-font-bold'>
             FIND
             <span className='bg-gradient-to-r ms-4 from-fuchsia-500 to-indigo-400 inline-block text-transparent bg-clip-text me-2'> BEST </span>
             <br />
@@ -59,7 +59,7 @@ const Home = () => {
       </section>
       <section id='about' className='flex md:ps-12 max-md:flex-col-reverse pt-20 pb-20 max-md:gap-10'>
         <div className='flex-1 flex-center  '>
-          <img src="/assets/images/about.png" alt="About" className='max-w-[430px] max-md:max-w-[380px]' />
+          <img src="/assets/images/about.png" alt="About" className='max-w-[430px] ms-5 max-md:max-w-[320px]' />
         </div>
         <div className='flex-1  md:ps-10 flex flex-col justify-center max-md:items-center relative'>
           <img src="/assets/images/stars.png" alt="stars" className='w-20 absolute top-[-100px] right-20'/>
@@ -69,12 +69,12 @@ const Home = () => {
             <br />
           </h2>
           <div className='flex flex-col '>
-            <p className='text-gray-500 text-base mt-7 mb-5 font-medium max-w-[400px] md:max-w-[480px]'>
+            <p className='text-gray-500 text-base mt-7 mb-5 max-md:ps-2 max-md:text-center font-medium max-w-[400px] md:max-w-[480px]'>
               Discover top educators nearby, enabling students and teachers to schedule appointments and demos seamlessly Discover top educators nearby, enabling students and teachers to schedule appointments and demos seamlessly.
             </p>
           </div>
           <div className='flex flex-col  gap-5  font-medium '>
-            <div className='flex gap-10'>
+            <div className='flex gap-10 max-md:gap-3'>
               <div className='flex-center gap-2 me-2'>
                 <img src="/assets/images/check.png" alt="check" className='w-6 ' />
                 <p>Expert Training</p>
@@ -84,7 +84,7 @@ const Home = () => {
                 <p>Online Learning</p>
               </div>
             </div>
-            <div className='flex gap-10'>
+            <div className='flex gap-10 max-md:gap-3'>
               <div className='flex-center gap-2'>
                 <img src="/assets/images/check2.png" alt="check" className='w-6' />
                 <p>Lifetime Access</p>
@@ -102,8 +102,8 @@ const Home = () => {
       </section>
       <section className='flex md:ps-12 max-md:flex-col pt-0 pb-20 max-md:gap-10'>
 
-        <div className='flex-1 ps-5 flex flex-col justify-center md:max-w-[540px] max-md:items-center relative'>
-          <img src="/assets/images/stars.png" alt="stars" className='w-20 absolute top-[-50px] max-md:left-10'/>
+        <div className='flex-1 md:ps-5 flex flex-col justify-center md:max-w-[540px] max-md:items-center relative'>
+          <img src="/assets/images/stars.png" alt="stars" className='max-w-20  absolute top-[-50px] max-md:left-10'/>
           <h2 className='text-5xl  text-[#353452] font-medium max-md:text-center'>
             Meet Skilled
             <br className='hidden max-md:block' />
@@ -111,7 +111,7 @@ const Home = () => {
             Near Your Home
           </h2>
           <div className='flex max-md:flex-col max-md:items-center'>
-            <p className='text-gray-500 text-base mt-7 mb-5 font-medium  max-w-[400px] md:max-w-[480px]'>
+            <p className='text-gray-500 text-base max-md:text-center mt-7 mb-5 font-medium  max-w-[400px] md:max-w-[480px]'>
               Discover top educators nearby, enabling students and teachers to schedule appointments and demos seamlessly Discover top educators nearby, enabling students and teachers to schedule appointments and demos seamlessly.
             </p>
           </div>

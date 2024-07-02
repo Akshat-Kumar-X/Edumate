@@ -11,10 +11,10 @@ const Footer = () => {
   return (
     <footer className='bg-transparent'>
       <div className=" pt-[3px] pointer-events-none bg-gradient-to-r from-transparent via-[#E7E7E9] to-transparent"></div>
-      <div className='max-w-7xl mx-auto px-10'>
+      <div className='max-w-7xl mx-auto px-10 max-md:px-16'>
         <div className='flex md:flex-row flex-col justify-between items-center md:pe-5'>
-          <div className="md:pe-10 md:pb-2 pb-5 pt-3 flex flex-row gap-10 relative">
-            <div>
+          <div className="md:pe-10 md:pb-2 pb-5 pt-3   flex flex-row gap-10 relative">
+            <div >
               <img src="/logo.png" alt="Logo" className='w-36' />
               <p className='text-[#494954] font-medium ps-3 text-lg hidden md:block'>Get Best Teachers Near you</p>
               <div className="flex items-center text-[#292941] font-medium ps-3 pt-2 text-sm gap-2">
@@ -30,8 +30,8 @@ const Footer = () => {
                 <p>+91 8800403533</p>
               </div>
             </div>
-            <div className="max-md:absolute md:hidden h-[230px] w-[3px] top-0 left-[250px] pointer-events-none bg-gradient-to-b from-[#E7E7E9] to-transparent"></div>
-            <div className="md:hidden flex flex-col md:gap-3 gap-5 text-[#353452]">
+            <div className="max-md:absolute md:hidden max-md:ms-[-10px] h-[230px] w-[3px] top-0 left-[250px] pointer-events-none bg-gradient-to-b from-[#E7E7E9] to-transparent"></div>
+            <div className="md:hidden flex flex-col max-md:ms-[-20px] md:gap-3 gap-5 text-[#353452]">
               <h3 className="flex items-center text-2xl gap-2">Socials <span className=" font-xm text-xl text-[#5f5e75] ">⟶</span></h3>
               <Link to='https://www.linkedin.com/in/akshat-kumar-86203224a/' className="flex items-center gap-2"><FaLinkedinIn /> Linkedin</Link>
               <a href='https://github.com/Akshat-Kumar-X' className="flex items-center gap-2"><FaGithub /> GitHub</a>
