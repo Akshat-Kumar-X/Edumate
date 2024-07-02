@@ -27,7 +27,7 @@ const TeacherProfile = () => {
   useEffect(() => {
     const fetchTeacher = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/teacher-profile/${id}`);
+        const response = await axios.get(`${BASE_URL}/api/teacher-profile/${id}`);
         setTeacher(response.data);
       } catch (err) {
         console.error(err);
