@@ -19,6 +19,7 @@ const TeacherRegister = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const loadingToast = toast.loading('Signing up...');
 
     try {
       let image = '';
@@ -27,6 +28,7 @@ const TeacherRegister = () => {
       const result = await axios.post(`${BASE_URL}/api/teacher-register`, {
         name, email, password, subject, experience, location, contact, description, image
       });
+      toast.dismiss(loadingToast);
 
       if (result.data.message === 'User not created') {
         toast.error(result.data.message);
@@ -35,6 +37,7 @@ const TeacherRegister = () => {
         navigate('/teacher-login');
       }
     } catch (err) {
+      toast.dismiss(loadingToast);
       console.log(err.message);
       toast.error('Registration failed');
     }
@@ -48,7 +51,7 @@ const TeacherRegister = () => {
             
             <div className='flex-1 flex items-center'>
               <div className='flex flex-col w-full bg-white p-10 text-black rounded-3xl '>
-                <img src="/logo.png" alt="Logo" className='w-40 mb-1 ml-[-10px]' />
+                <img loading='lazy'  src="/logo.png" alt="Logo" className='w-40 mb-1 ml-[-10px]' />
                 <h1 className='text-[#353452] text-3xl  font-semibold mb-5'>
                   <span className='bg-gradient-to-r from-pink-400 to-rose-500 text-transparent bg-clip-text font-bold'>Teacher</span> SignUp
                 </h1>

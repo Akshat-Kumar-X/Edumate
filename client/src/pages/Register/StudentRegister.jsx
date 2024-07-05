@@ -14,9 +14,12 @@ const StudentRegister = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const loadingToast = toast.loading('Signing up...');
 
     try {
       const result = await axios.post(`${BASE_URL}/api/student-register`, { name, email, password });
+      toast.dismiss(loadingToast);
+
       if (result.data === 'User not created') {
         toast.error(result.data);
       } else {
@@ -24,6 +27,7 @@ const StudentRegister = () => {
         navigate('/student-login');
       }
     } catch (err) {
+      toast.dismiss(loadingToast);
       console.log(err.message);
       toast.error('Registration failed');
     }
@@ -37,7 +41,7 @@ const StudentRegister = () => {
             
             <div className='flex-1 flex items-center'>
               <div className='flex flex-col w-full bg-white p-10 text-black rounded-3xl '>
-                <img src="/logo.png" alt="Logo" className='w-40 mb-1 ml-[-10px]' />
+                <img loading='lazy'  src="/logo.png" alt="Logo" className='w-40 mb-1 ml-[-10px]' />
                 <h1 className='text-[#353452] text-5xl  font-semibold mb-5'>
                   <span className='bg-gradient-to-r from-pink-400 to-rose-500 text-transparent bg-clip-text font-bold'>Student</span> SignUp
                 </h1>

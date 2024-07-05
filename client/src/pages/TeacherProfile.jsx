@@ -70,7 +70,7 @@ const TeacherProfile = () => {
   };
 
   if (!teacher) {
-    return <div>Loading...</div>;
+    return <div className='text-[#353452] text-3xl font-semibold max-w-7xl mt-20 flex-center'>Loading...</div>;
   }
 
   const user = JSON.parse(localStorage.getItem('user'));

@@ -218,7 +218,8 @@ const FindTeachers = () => {
             </div>
           </div>
           <div className='flex flex-col gap-8 flex-1 max-md:mt-5'>
-            {filteredTeachers.map((teacher) => (
+            {filteredTeachers.length == 0 ? (<div className='text-[#353452] text-3xl font-semibold mt-20 flex-center'>Loading...</div>) : (<></>)}{
+            filteredTeachers.map((teacher) => (
               <TeacherCard
                 key={teacher._id}
                 id={teacher._id}

@@ -12,12 +12,16 @@ const TeacherLogin = () => {
   const navigate = useNavigate();
   const { login } = useContext(AuthContext);
   axios.defaults.withCredentials = true;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const loadingToast = toast.loading('Logging in...');
 
     try {
       const result = await axios.post(`${BASE_URL}/api/teacher-login`, { email, password });
       const { message, user } = result.data;
+      toast.dismiss(loadingToast);
+
       if (message === 'Login successful') {
         toast.success(message);
         login(user);
@@ -26,6 +30,7 @@ const TeacherLogin = () => {
         toast.error(message);
       }
     } catch (err) {
+      toast.dismiss(loadingToast);
       console.log(err.message);
       toast.error('Login failed');
     }
@@ -37,7 +42,7 @@ const TeacherLogin = () => {
         <div className='flex flex-col justify-center items-center h-full'>
           <div className='flex flex-row rounded-3xl bg-white shadow-2xl'>
             <div className='flex-1 max-w-[550px] object-cover max-md:hidden p-5 pr-0' >
-              <img src="/assets/images/login.png" alt="Login Banner" />
+              <img loading='lazy' src="/assets/images/login.png" alt="Login Banner" />
             </div>
             <div className='flex-1 flex items-center'>
               <div className='flex flex-col w-full bg-white p-10 text-black rounded-md '>

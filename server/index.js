@@ -9,7 +9,7 @@ import StudentModel from './models/Student.model.js';
 import AppointmentModel from './models/Appointment.model.js';
 
 dotenv.config();
-
+//  http://localhost:5173
 const app = express();
 app.use(express.json({ limit: '50mb' }));
 app.use(cors({
