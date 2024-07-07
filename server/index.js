@@ -52,24 +52,24 @@ app.post('/api/send-verification-code', async (req, res) => {
     subject: 'Edumate Verification Code',
     html: `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #555;">
-      <div style="text-align: center; padding: 20px; background-color: #f4f4f4; border-bottom: 1px solid #ddd;">
-        <h1 style="color: #4CAF50;">Welcome!</h1>
+      <div style="text-align: center; padding: 20px; background: linear-gradient(to right, #fbcffb 0%, #c4c3fc 50%, #c5b4ff 100%); border-bottom: 1px solid #ddd; border-radius: 12px;">
+        <h1 style="color: #ffffff;">Welcome to Edumate!</h1>
       </div>
       <div style="padding: 20px;">
         <h2 style="color: #333;">Dear User,</h2>
         <p>Thank you for signing up!</p>
         <p>Your verification code is:</p>
-        <p style="font-size: 28px; font-weight: bold; color: #4CAF50; text-align: center; border: 1px dashed #4CAF50; padding: 10px; margin: 20px 0;">${verificationCode}</p>
+        <p style="font-size: 28px; font-weight: bold; color: #E67AFA; text-align: center; border: 1px dashed #4CAF50; padding: 10px; margin: 20px 0;">${verificationCode}</p>
         <p>Please enter this code in the verification field to activate your account.</p>
         <p>If you did not request this email, please ignore it.</p>
         <br>
         <p>Best regards,</p>
-        <p><strong>Edumate</strong></p>
+        <p><strong>Edumate Team</strong></p>
       </div>
-      <div style="text-align: center; padding: 10px; background-color: #f4f4f4; border-top: 1px solid #ddd; color: #999;">
+      <div style="text-align: center; padding: 15px 10px; background-color: #f4f4f4;border-bottom: 1px solid #ddd; border-radius: 12px;; color: #999;">
         <p style="margin: 0;">Noida, India</p>
         <p style="margin: 0;">Follow us on: 
-          <a href="https://www.linkedin.com/in/akshat-kumar-86203224a/" style="color: #3b5998;">Linkedin</a> | 
+          <a href="https://www.linkedin.com/in/akshat-kumar-86203224a/" style="color: #1da1f2;">Linkedin</a> | 
           <a href="https://akshat-kumar-portfolio.vercel.app/" style="color: #1da1f2;">Portfolio</a> |
           <a href="https://github.com/Akshat-Kumar-X" style="color: #1da1f2;">GitHub</a>
         </p>
