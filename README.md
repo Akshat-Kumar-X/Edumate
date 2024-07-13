@@ -1,6 +1,6 @@
 # Edumate
 
-Edumate is a web application designed to facilitate teacher-student interactions. It provides a platform for teachers to log in and manage their interactions with students, while students can easily find and schedule appointments with their teachers. 
+Edumate is a web application designed to facilitate teacher-student interactions. It provides a platform for teachers to log in and manage their interactions with students, while students can easily find and schedule appointments with their teachers.
 
 ## Live Link : [Edumate.vercel.com](https://edumate-tutor.vercel.app/)
 
